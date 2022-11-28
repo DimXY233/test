@@ -1,0 +1,39 @@
+.form-wrapper {
+    width: 400px;
+  }
+  
+  .title {
+    color: rgb(75, 0, 113);
+    font-family: 'Lobster', cursive;
+  }
+  
+  input:focus {
+    outline-color: purple;
+  }
+  
+  #tap {
+    width: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    margin-right: 5px;
+  }
+  
+  #tap + label {
+    display: inline;
+    vertical-align: middle;
+  }
+  
+  .submit-button {
+    margin-top: 8px;
+    background-color: rgb(93, 31, 106);
+  }
+  
+  .submit-button:hover {
+    background-color: rgb(140, 56, 161);
+  }
+  
+  label {
+    color: darkmagenta;
+  }
+  

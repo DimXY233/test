@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/newblog.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="icon-logo-back">
+          <a th:href="@{/blogall}">
+            <span id="icon-logo" class="material-icons">format_bold</span>
+          </a>
+          <span class="title" id="cite-title">BLOG</span>
+        </div>
+    
+        <div id="header-links">
+        <a th:href="@{/login}">Login</a>
+        <a th:href="@{/register}">Register</a>
+        </div>
+      </header>
+    <div class="blog-body">
+
+        <div class ="g-top">
+            <p>top</p>
+        </div>
+          <div class="blog-hd">
+            <div class="m-title">
+              <div class="userID">New Blog</div>
+            </div> 
+          </div>
+
+        <form method="post" th:action="@{/newblogs}" enctype="multipart/form-data">
+            <div class="g-bd">
+                <div class="m-bd">                  
+                  <div class="m-post m-post-photo">
+                    <div class="post box">
+                      <div class="cnt box">
+                        <div class="des">
+                          <h1>Title</h1>
+                          <div class="des-title">
+                          <input type="text" name="blogTitle" maxlength="50" required>
+                          </div>
+                        </div>
+                        <div class="des">
+                          <br>
+                          <div class="m-text">
+                            <textarea class="imput" id="newBlog" name="newblog" type="text" required ></textarea>
+                            
+                        </div>
+                        <div class="des">
+                          <div class="d-pu">                          
+                            <input class="submit-button" type="file" name="blogImage" required>
+                            </div>
+                          <div class="d-bu">
+                          <input class="submit-button" type="submit" value="→">
+                          </div>
+                        </div>
+        
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+        </form>
+    </div>
+</body>
+</html>

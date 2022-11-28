@@ -1,0 +1,75 @@
+.blog-body{height:100%;width:100%;background-color: rgb(57, 38, 63);padding-bottom:120px;}
+input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    border-radius: 7px;
+    border: 1px solid rgb(253, 233, 255);
+    padding: 0 9px;
+    background-color: #e9ddf0;
+  }
+
+ .m-post .cnt .des {
+    margin-top: 10px;
+    
+}
+.m-post.m-post-photo .post .cnt {
+    padding: 20px 70px;
+}
+h1{
+    color: rgb(108, 11, 198);
+}
+.des-title{
+    height: 40px;
+}
+.m-text{
+    height: 190px;
+}
+.d-bu{
+    position:relative;
+    float: right;
+    width: 45%;
+}
+.d-pu{
+    position:relative;
+    float: left;
+    width: 45%;
+    
+}
+.submit-button{
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    color: rgb(108, 11, 198);
+    margin-bottom: 1rem;
+    cursor: default;
+    
+}
+.submit-button:hover {
+    background-color: rgb(154, 105, 246);
+  }
+  .submit-button:active {
+    background-color: rgb(233, 188, 255);
+  }
+  .imput{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    border-radius: 7px;
+    border: 1px solid rgb(253, 233, 255);
+    padding: 0 9px;
+    background-color: #e9ddf0;
+    resize: none;
+}
+.g-top{
+    margin-top: 20px;
+}
+a + a {
+    margin-left: 10px;
+}
+a {
+    text-decoration: none;
+    background-color: transparent;
+}

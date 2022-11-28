@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Blog</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lobster&display=swap" rel="stylesheet">    
+  </head>
+
+  <body>
+    <header>
+      <div id="icon-logo-back">
+        <a th:href="@{/blogall}">
+          <span id="icon-logo" class="material-icons">format_bold</span>
+        </a>
+        <span  class="title" id="cite-title">BLOG</span>
+      </div>
+  
+      <div id="header-links">
+      <form th:action="@{/logout}" method="post">
+      <a href="#" onclick="this.parentNode.submit()">Logout</a>
+      <a th:href="@{/login}">Login</a>
+      </form>
+        
+      </div>
+  
+    </header>
+
+    <div class="blog-body">
+      <div class ="g-top">
+        <p>text</p>
+      </div>
+      <div class="blog-hd">
+        <div class="m-title">
+          <div class="userID" th:text="${username}"> UserName</div>
+        </div>
+        <div class="m-sd">
+        <div class="m-user">
+          <div class="user">
+            <div class="m-img">
+              <div class="img">
+                <img src="/img/userimg.png">
+              </div>
+            </div>
+          <div id="sdinfo" class="info" style="display: block;">
+            user info
+            <br>
+            user info
+          </div>  
+          </div>
+        </div>
+        <div class="m-sch">
+          <div class="left">
+            <div class="sch">
+              <form id="sch" action="/search" method="get"><input value="" id="search_content" type="text" name="q"></form>
+            </div>
+
+          </div>
+          <div class="right">
+            <div class="icon"></div>
+          </div>
+        </div>
+        <br>
+        <div class="menu">
+          <div class="m-icon">
+             <a th:href="@{/newblog}">
+              <div  class="new" id="new" >New Blog</div>
+             </a> 
+           </div>
+          
+        </div>
+      </div>
+      </div>
+      <div class="g-bd">
+        <div class="m-bd">
+          <a class="m-post m-post-photo" th:href="'/blogdetail/'+${blog.blogId}" th:each="blog:${blogList}">
+            <div class="post box">
+              <div class="dtil">
+                <div class="time">
+                  <div class="maj">
+                  <span>Oct.30</span>
+                  <span>2022</span>
+                  </div>
+                </div>
+                <div class="fav">
+                  <div class="maj maj-1">
+                  <span>❤ 0</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cnt box">
+                <div class="des-itle">
+                  <h1 th:text=" ${blog.blogTitle}" name="blogTitle"> </h1>
+                </div>
+                <div class="pic">
+                  <div class="img">
+                    <img th:src="@{./blog-image/{items}(items=${blog.blogImage})}">
+                  </div>
+                </div>
+                <div class="des">
+                  <p >more...</p>
+                </div>
+
+              </div>
+            </div>
+          </a>
+          
+        </div>
+      </div>
+
+      
+
+
+    </div> 
+
+    <div id="topScroll" class="topIcon" onclick="goTop()">↑</div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/GoTop.js"></script>
+  </body>
+</html>

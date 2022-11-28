@@ -1,0 +1,28 @@
+.form-wrapper {
+    width: 400px;
+  }
+  
+  .title {
+    color: rgb(148, 8, 255);
+  }
+  
+  input:focus {
+    outline-color: rgb(177, 116, 234);
+  }
+  
+  .submit-button {
+    margin-top: 30px;
+    background-color: rgb(89, 74, 224);
+  }
+  
+  .submit-button:hover {
+    background-color: rgb(154, 105, 246);
+  }
+  
+  .submit-button:active {
+    background-color: lightgrey;
+  }
+  
+  label {
+    color: rgb(98, 9, 171);
+  }
